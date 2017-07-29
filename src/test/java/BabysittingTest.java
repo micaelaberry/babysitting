@@ -1,5 +1,6 @@
 import static org.junit.Assert.*;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -33,8 +34,8 @@ public class BabysittingTest {
 	
 	@Test
 	public void startTimeToBedTimeTheyArePaidTwelveAnHour(){
-	int payment = 12;
-	assertEquals(babysitting.getPayment(17, 22)22);
+	/*int payment = 12;*/
+	assertEquals(babysitting.getPayment(17, 22), 12);
 		
 	}
 	
