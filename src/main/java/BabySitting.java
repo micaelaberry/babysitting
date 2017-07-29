@@ -9,6 +9,10 @@ public class BabySitting {
 	
 	private int bedTime = 22;
 	
+	public int getBedTime() {
+		return bedTime;
+	}
+	
 	public boolean isValidStartTime(int time) {
 		if (time >= 17 || time <= 4) {
 			return true;
@@ -17,7 +21,4 @@ public class BabySitting {
 
 	}
 
-	public int getBedTime() {
-		return bedTime;
-	}
 }

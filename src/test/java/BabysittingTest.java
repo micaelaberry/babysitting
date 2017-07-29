@@ -1,30 +1,43 @@
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class BabysittingTest {
+	
+	BabySitting babysitting;
+	
+	@Before
+	public void setUp(){
+		babysitting = new BabySitting();
+	}
+	
 
 	@Test
 	public void whenStartTimeIsBeforeFivePm(){
-	BabySitting babysitting = new BabySitting();
 	int startTime = 16;
 	assertEquals(babysitting.isValidStartTime(startTime), false);
 }
 	
 	@Test
 	public void whenStartTimeIsAfterFivePm(){
-	BabySitting babysitting = new BabySitting();
 	int startTime = 18;
 	assertEquals(babysitting.isValidStartTime(startTime), true);
 	}
 	
 	@Test
 	public void myBedTimeIsTenPm(){
-	BabySitting babysitting = new BabySitting();
-	int bedTime = 22;
 	assertEquals(babysitting.getBedTime(), 22);
 		
 	}
+	
+	@Test
+	public void startTimeToBedTimeTheyArePaidTwelveAnHour(){
+	int payment = 12;
+	assertEquals(babysitting.getPayment(17, 22)22);
+		
+	}
+	
 }
 
 
