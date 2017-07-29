@@ -7,6 +7,7 @@ public class BabySitting {
 //	gets paid $16/hour from midnight to end of job
 //	gets paid for full hours (no fractional hours)
 	
+	private int bedTime = 22;
 	
 	public boolean isValidStartTime(int time) {
 		if (time >= 17 || time <= 4) {
@@ -14,5 +15,9 @@ public class BabySitting {
 		}
 		return false;
 
+	}
+
+	public int getBedTime() {
+		return bedTime;
 	}
 }
