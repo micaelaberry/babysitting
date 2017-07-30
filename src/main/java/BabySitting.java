@@ -24,14 +24,21 @@ public class BabySitting {
 
 	public int getPayment(int startTime, int endTime) {
 		int totalPayment = 0;
-		int hourlyPayment = 12; 
+		int hourlyPayment;
+
 		for (int currentTime = startTime; currentTime <= bedTime; currentTime++) {
 
 			if (currentTime < bedTime) {
+				hourlyPayment = 12;
+
+				/*
+				 * } else if (currentTime >= bedTime && currentTime < 24) {
+				 * hourlyPayment = 8;
+				 */
+
 			}
 
 		}
-		return hourlyPayment;
-	
+		return totalPayment;
 	}
 }
