@@ -16,7 +16,7 @@ public class BabysittingTest {
 	@Test
 	public void whenStartTimeIsBeforeFivePm() {
 		int startTime = 16;
-		assertEquals(babysitting.isValidStartTime(startTime), false);
+		assertEquals(false, babysitting.isValidStartTime(startTime));
 	}
 
 	@Test
@@ -27,19 +27,24 @@ public class BabysittingTest {
 
 	@Test
 	public void myBedTimeIsTenPm() {
-		assertEquals(babysitting.getBedTime(), 22);
+		assertEquals(22, babysitting.getBedTime());
 
 	}
 
-/*	@Test
+	@Test
 	public void startTimeToBedTimeTheyArePaidTwelveAnHour() {
-		assertEquals(babysitting.getPayment(17, 22), 12);
+		assertEquals(12, babysitting.getPayment(17, 22));
 
-	}*/
+	}
 
-	/*
-	 * @Test public void bedTimeToMidnightTheyArePaidEightAnHour(){
-	 * assertEquals(babysitting.getPayment(22, 24), 8); }
-	 */
-
+	
+	@Test
+	public void fromBedtimeToMidnightTheyArePaidEightAnHour() {
+		assertEquals(8, babysitting.getPayment(22, 24));
+	}
+	
+	@Test
+	public void fromMidnightToEndTimeTheyArePaidSixteenAnHour() {
+		assertEquals(16, babysitting.getPayment(0, 4));
+	}
 }
