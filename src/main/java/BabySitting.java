@@ -6,6 +6,7 @@ public class BabySitting {
 	// gets paid $8/hour from bedtime to midnight
 	// gets paid $16/hour from midnight to end of job
 	// gets paid for full hours (no fractional hours)
+	// using military time for simplicity 
 
 	private int startTime = 17;
 	private int bedTime = 22;
